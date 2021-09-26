@@ -1,9 +1,9 @@
 const mongoose=require("mongoose");
 const{ Schema }=mongoose;
 const productSchema=new Schema({
+    id:Number,
     name: String,
-    description: String,
-    mrpPrice: Number,
-    sellPrice: Number,
+    product_price:Number,
+    quantity:Number,
 })
 module.exports=mongoose.model('Product',productSchema);
