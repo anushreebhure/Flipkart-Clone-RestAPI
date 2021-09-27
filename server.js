@@ -65,38 +65,7 @@ app.get('/products',function(request,response){
     })
 
 })
-app.post('/customers',function(request,response){
-    var customer=new Customer()
-    customer.customer_id=request.body.customer_id
-    customer.name=request.body.name
-    customer.username=request.body.username
-    customer.email=request.body.email
-    customer.phone=request.body.phone
-    customer.save(function(error, savedCustomer){
-        if(error){
-            response.status(500).send({error:"Not found"})
-        }else{
-            response.status(200).send(savedCustomer)
-        }
-    })
 
-})
-app.get('/customers',function(request,response){
-    var customer=new Customer()
-    customer.customer_id=request.body.customer_id
-    customer.name=request.body.name
-    customer.username=request.body.username
-    customer.email=request.body.email
-    customer.phone=request.body.phone
-    customer.save(function(error, savedCustomer){
-        if(error){
-            response.status(500).send({error:"Not found"})
-        }else{
-            response.status(200).send(savedCustomer)
-        }
-    })
-
-})
 app.post('/orders',function(request,response){
     var order=new Order()
     order.order_id=request.body.order_id
@@ -205,7 +174,7 @@ app.get('/supplier',function(request,response){
     })
 
 })
-app.post('/signup',(req,res,next)=>{
+app.post('/customers',(req,res,next)=>{
     bcrypt.hash(req.body.password,10,(err,hash)=>{
         if(err){
             return res.status(500).json({
