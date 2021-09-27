@@ -1,11 +1,10 @@
 const mongoose=require("mongoose");
 const{ Schema }=mongoose;
-const customersSchema=new Schema({
-    customer_id:Number,
+const signupSchema=new Schema({
     username:String,
-    customer_name:String,
-    email:String,
-    phone:Number
-    
+    male_or_female:String,
+    email_id:String,
+    password:String,
+    customer_id:Number
 })
-module.exports=mongoose.model('Customer',customersSchema);
+module.exports=mongoose.model('SignUp',signupSchema);
