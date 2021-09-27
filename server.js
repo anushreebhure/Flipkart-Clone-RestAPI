@@ -4,11 +4,10 @@ const mongoose=require("mongoose");
 
 //models
 const Product=require("./src/models/product");
-const SignUp=require("./src/models/signup");
+const SignUp=require("./src/models/customers");
 const Supplier=require("./src/models/supplier")
 const Order=require("./src/models/orders")
 const Address=require("./src/models/address")
-const Customer=require("./src/models/customers")
 const bcrypt=require('bcrypt')
 const jwt=require('jsonwebtoken')
 //define app
